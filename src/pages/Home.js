@@ -480,25 +480,8 @@ export default class Home extends React.Component{
               <Form.Control type="date" className='w-50 me-2 my-3' onChange={(event) => {this.setState({data_inizio: event.target.value});}}></Form.Control> 
               <Form.Label className='my-4'>Data Fine:</Form.Label>
               <Form.Control type="date" className='w-50 me-2 my-3' onChange={(event) => this.setState({data_fine: event.target.value})}></Form.Control>
-              <Button variant="dark" className='h-50 my-4' onClick={()=> this.cerca_sale_e_post()}>Invia</Button>
-            </Col>
-          <Col></Col>
-          <Col xs={12}></Col>
-          <Col xs={12}></Col>
-          <Col xs={12}></Col>
-          <Col xs={12}></Col>
-          <Col xs={12}></Col>
-          <Col xs={12}></Col>
-          <Col xs={12}></Col>
-          <Col xs={12}></Col>
-          <Col xs={12}></Col>
-        </Row>
-        <Row className='my-2'>
-          <Col xs={4}></Col>
-          <Col xs={4} className='mx-md-5'>
-            <Form className='mx-md-5'>
-              {['radio'].map((type) => (
-                <div key={`inline-${type}`} className="mb-3">
+              {['checkbox'].map((type) => (
+                <div key={`inline-${type}`} className="my-4">
                   <Form.Check
                     inline
                     label="Sale"
@@ -519,13 +502,32 @@ export default class Home extends React.Component{
                   />
                 </div>
               ))}
-            </Form>
+              <Button variant="dark" className='h-50 my-4' onClick={()=> this.cerca_sale_e_post()}>Cerca</Button>
+              
+              
+              
+          
+            </Col>
+          <Col></Col>
+          <Col xs={12}></Col>
+          <Col xs={12}></Col>
+          <Col xs={12}></Col>
+          <Col xs={12}></Col>
+          <Col xs={12}></Col>
+          <Col xs={12}></Col>
+          <Col xs={12}></Col>
+          <Col xs={12}></Col>
+          <Col xs={12}></Col>
+        </Row>
+        <Row className='my-2'>
+          <Col xs={4}></Col>
+          <Col xs={4} className='mx-md-5'>
           </Col>
           <Col xs={4}></Col>
         </Row>
         <Row className='mx-2 my-2'>
           <Col xs={12}>
-            <Alert className='my-2' variant='danger' hidden={this.state.show_alert}>Date immesse non valide!</Alert>
+            <Alert className='my-2' variant='danger' hidden={this.state.show_alert}>Date non valide!</Alert>
             <Alert className='my-2' variant='danger' hidden={!this.state.show_alert_warning || (this.state.show_alert_warning && !this.state.sale_search)}>Nessuna sala disponibile per tale data!</Alert>
             <Alert className='my-2' variant='danger' hidden={!this.state.show_alert_warning_post || (this.state.show_alert_warning_post && this.state.sale_search)}>Nessuna postazione disponibile per tale data!</Alert>
             <Alert className='my-2' variant='success' hidden={!this.state.show_alert_success}>Prenotazione Effettuata!</Alert>

@@ -45,7 +45,7 @@ function HomeButton(props) {
       <Button variant='dark' onClick={handleClick}>
       Accedi
       </Button>
-      <Alert className='my-2' variant='danger' hidden={show_alert}>Username o password errate!</Alert>
+      <Alert className='my-2' variant='danger' hidden={show_alert}>User Id o password errate!</Alert>
     </div>
   );
 }

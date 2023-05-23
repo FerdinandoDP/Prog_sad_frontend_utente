@@ -26,7 +26,7 @@ export class MyNavBar extends React.Component{
 
 
     init(){
-        //this.setState({logged: window.logged})
+        this.setState({logged: window.logged})
         if(window.logged == true){
             console.log('arrivaaaaaaaaa')
         }
@@ -37,6 +37,8 @@ export class MyNavBar extends React.Component{
         this.init();
         console.log(window.logged)
     }
+
+    
 
     render(){
         return( 
