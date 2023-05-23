@@ -187,7 +187,7 @@ export default class Home extends React.Component{
                       <p><b>Servizi:</b> {element.extra}</p>
                     </div>
                   </div>
-                  <div className='ms-auto'>
+                  <div className='ms-md-auto'>
                     <h5>{element.costo+'$'}</h5>
                     <Button variant="dark" className='h-50 mt-2' onClick={() => this.ShowModalPrenotaSale(element)}>Modifica</Button>
                   </div>
@@ -220,7 +220,7 @@ export default class Home extends React.Component{
                     </div>
                   </div>
                   <div className='ms-auto'>
-                    <h5>{element.costo+'$ al giorno'}</h5>
+                    <h5 className='mx-2'>{element.costo+'$ al giorno'}</h5>
                     <Button variant="dark" className='h-50 mt-2'  onClick={()=>this.ShowModalPrenotaSale(this.state.sale_non_occupate[i])}>Prenota</Button>
                   </div>
             </Stack>
@@ -241,9 +241,10 @@ export default class Home extends React.Component{
                       </div>
                     </div>
                     <div className='ms-auto'>
-                      <h5>{element.costo+'$ al giorno'}</h5>
+                      <h5 className='mx-2'>{element.costo+'$ al giorno'}</h5>
                       <Button variant="dark" className='h-50 mt-2' onClick={()=>this.showModalPrenotaPostazione(this.state.postazioni_non_occupate[j])}>Prenota</Button>
                     </div>
+                    
               </Stack>
           </ListGroupItem>);
           }
