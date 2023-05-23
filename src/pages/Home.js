@@ -476,38 +476,34 @@ export default class Home extends React.Component{
           <Col xs={4}><h1 id='text_shadow' className='text-white'>PRENOTA DA NOI:</h1></Col>
           <Col xs={4}></Col>
           <Col></Col>
-            <Col className='col_search d-flex justify-content-center' md={10}>
-              <Form.Label className='my-4'>Data Inizio:</Form.Label>
-              <Form.Control type="date" className='w-50 me-2 my-3' onChange={(event) => {this.setState({data_inizio: event.target.value});}}></Form.Control> 
-              <Form.Label className='my-4'>Data Fine:</Form.Label>
-              <Form.Control type="date" className='w-50 me-2 my-3' onChange={(event) => this.setState({data_fine: event.target.value})}></Form.Control>
-              {['checkbox'].map((type) => (
-                <div key={`inline-${type}`} className="my-4">
-                  <Form.Check
-                    inline
-                    label="Sale"
-                    name="group1"
-                    checked={this.state.sale_search}
-                    type={type}
-                    id={`inline-${type}-1`}
-                    onChange={()=>this.setState({sale_search: true})}
-                  />
-                  <Form.Check
-                    inline
-                    label="Postazioni"
-                    name="group1"
-                    checked={!this.state.sale_search}
-                    type={type}
-                    id={`inline-${type}-2`}
-                    onChange={()=>this.setState({sale_search: false})}
-                  />
-                </div>
-              ))}
-              <Button variant="dark" className='h-50 my-4' onClick={()=> this.cerca_sale_e_post()}>Cerca</Button>
-              
-              
-              
-          
+          <Col className='col_search d-md-flex justify-content-center' md={10}>
+                <Form.Label className='my-4'>Data Inizio:</Form.Label>
+                <Form.Control type="date" className='w-50 me-md-2 my-3' onChange={(event) => {this.setState({data_inizio: event.target.value});}}></Form.Control> 
+                <Form.Label className='my-4'>Data Fine:</Form.Label>
+                <Form.Control type="date" className='w-50 me-2 my-3' onChange={(event) => this.setState({data_fine: event.target.value})}></Form.Control>
+                {['checkbox'].map((type) => (
+                  <div key={`inline-${type}`} className="my-4">
+                    <Form.Check
+                      inline
+                      label="Sale"
+                      name="group1"
+                      checked={this.state.sale_search}
+                      type={type}
+                      id={`inline-${type}-1`}
+                      onChange={()=>this.setState({sale_search: true})}
+                    />
+                    <Form.Check
+                      inline
+                      label="Postazioni"
+                      name="group1"
+                      checked={!this.state.sale_search}
+                      type={type}
+                      id={`inline-${type}-2`}
+                      onChange={()=>this.setState({sale_search: false})}
+                    />
+                  </div>
+                ))}
+                <Button variant="dark" className='h-md-50 my-4' onClick={()=> this.cerca_sale_e_post()}>Cerca</Button>
             </Col>
           <Col></Col>
           <Col xs={12}></Col>
