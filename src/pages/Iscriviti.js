@@ -96,7 +96,7 @@ export default class Iscriviti extends React.Component{
   render(){
     return(
       <Container fluid>
-        <Row className='cont_img_home'>
+        <Row className='cont_img_home' style={{backgroundImage: 'url(https://www.voglioviverecosi.com/wp-content/uploads/2020/03/COWORKING-GUIDA.jpg)', backgroundSize: 'cover', minHeight:600}}>
           <Col xs={12} className="my-2"></Col>
           <Col xs={5}></Col>
           <Col xs={2} className=''>
