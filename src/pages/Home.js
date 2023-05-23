@@ -444,7 +444,7 @@ export default class Home extends React.Component{
   render(){
     return(
       <Container fluid >
-        <Row fluid className='cont_img_home' style={{backgroundImage: 'url(https://www.voglioviverecosi.com/wp-content/uploads/2020/03/COWORKING-GUIDA.jpg)', backgroundSize: 'cover'}}>
+        <Row fluid className='cont_img_home' style={{backgroundImage: 'url(https://www.voglioviverecosi.com/wp-content/uploads/2020/03/COWORKING-GUIDA.jpg)', backgroundSize: 'cover', minHeight:200}}>
           <Col xs={12}></Col>
           <Col xs={12}></Col>
           <Col xs={12}></Col>
