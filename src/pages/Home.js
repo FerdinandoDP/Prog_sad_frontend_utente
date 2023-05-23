@@ -4,6 +4,7 @@ import './Home.css';
 import { Row , Col, Form, Button, Container, ListGroup, ListGroupItem, Stack, Alert, Modal} from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
 import { Link} from 'react-router-dom';
+//import Image from "./src/images/COWORKING-GUIDA.jpg"
 
 const compare_dates = (d1,d2) =>{
   let date1 = new Date(d1).getTime();
@@ -443,7 +444,7 @@ export default class Home extends React.Component{
   render(){
     return(
       <Container fluid >
-        <Row className='cont_img_home'>
+        <Row className='cont_img_home' style={{backgroundImage: 'url(https://www.voglioviverecosi.com/wp-content/uploads/2020/03/COWORKING-GUIDA.jpg)', backgroundSize: 'cover'}}>
           <Col xs={12}></Col>
           <Col xs={12}></Col>
           <Col xs={12}></Col>
