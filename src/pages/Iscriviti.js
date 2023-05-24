@@ -105,8 +105,8 @@ export default class Iscriviti extends React.Component{
           <Col xs={5}></Col>
         </Row>
         <Row className='my-5'>
-          <Col xs={4}></Col>
-          <Col xs={4} className='form_col'>
+          <Col xs={1} md={4}></Col>
+          <Col xs={10} md={4} className='form_col'>
             <Form className='my-4 mx-2'>
               <Form.Group className="mb-3" controlId="formBasicCF">
                 <Form.Label>Codice Fiscale*:</Form.Label>
@@ -149,7 +149,7 @@ export default class Iscriviti extends React.Component{
               <Alert className='my-2' variant='success' hidden={this.state.show_alert_3}>Utente creato con successo!</Alert>
           </Form>
         </Col>
-        <Col xs={4}></Col>
+        <Col xs={1} md={4}></Col>
         </Row>
           
         
