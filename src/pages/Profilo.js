@@ -93,7 +93,7 @@ export default class Profilo_page extends React.Component{
     add_card(prenotazione){
         console.log(prenotazione)
         return(
-            <Col>
+            <Col className='mx-4'>
             <Card border="dark" style={{ width: '16rem'}} className='my-2 mx-2'>
                 <Card.Header>Ticket: {prenotazione.id}</Card.Header>
                 <Card.Body>
@@ -223,9 +223,9 @@ export default class Profilo_page extends React.Component{
                 <Col></Col>
                 </Row>
                 <Row className='d-flex my-2'>
-                    <Col xs={3}>
+                    <Col xs={1} md={3}>
                     </Col>
-                    <Col xs={6} className='my-2'>
+                    <Col xs={10} md={6} className='my-2'>
                     
                     <Form.Group className="mb-3">
                         <Form.Label>Nome:*</Form.Label>
@@ -252,7 +252,7 @@ export default class Profilo_page extends React.Component{
                         <Form.Control placeholder={this.state.utente.indirizzo} disabled={!this.state.modifying} onChange={(event) => this.setState({indirizzo_m: event.target.value})} value={this.state.indirizzo_m}/>
                     </Form.Group>
                     </Col>
-                    <Col xs={3}></Col>
+                    <Col xs={1} md={3}></Col>
                 </Row>
                 <Row>
                     <Col xs={3}></Col>
