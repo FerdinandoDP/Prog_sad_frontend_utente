@@ -210,7 +210,7 @@ export default class Home extends React.Component{
           console.log(this.state.sale_non_occupate[i].costo)
           array.push(<ListGroupItem key={element._id} hidden={!this.state.sale_search}>
             <Stack direction='horizontal'>
-                  <div className='d-flex justify-content-start'>
+                  <div className='d-md-flex justify-content-start'>
                     <img className='image_list' width={160} height={160} src={'https://thumbs.dreamstime.com/b/icona-sala-riunioni-illustrazione-semplice-dell-della-158395205.jpg'} />
                     <div className='mx-2'>
                       <h4>{element.id}</h4>
@@ -220,8 +220,8 @@ export default class Home extends React.Component{
                     </div>
                   </div>
                   <div className='ms-auto'>
-                    <h5 className='mx-2'>{element.costo+'$ al giorno'}</h5>
-                    <Button variant="dark" className='h-50 mt-2'  onClick={()=>this.ShowModalPrenotaSale(this.state.sale_non_occupate[i])}>Prenota</Button>
+                      <h5 className='mx-2'>{element.costo+'$ al giorno'}</h5>
+                      <Button variant="dark" className=' mt-2'  onClick={()=>this.ShowModalPrenotaSale(this.state.sale_non_occupate[i])}>Prenota</Button>
                   </div>
             </Stack>
         </ListGroupItem>);
@@ -476,8 +476,8 @@ export default class Home extends React.Component{
           <Col xs={4}></Col>
           <Col xs={4}><h1 id='text_shadow' className='text-white'>PRENOTA DA NOI:</h1></Col>
           <Col xs={4}></Col>
-          <Col></Col>
-          <Col className='col_search d-md-flex justify-content-center' md={10}>
+          <Col ></Col>
+          <Col className='col_search d-md-flex justify-content-center my-2' xs={10} md={10}>
                 <Form.Label className='my-4'>Data Inizio:</Form.Label>
                 <Form.Control type="date" className='w-50 me-md-2 my-3' onChange={(event) => {this.setState({data_inizio: event.target.value});}}></Form.Control> 
                 <Form.Label className='my-4'>Data Fine:</Form.Label>
@@ -506,7 +506,7 @@ export default class Home extends React.Component{
                 ))}
                 <Button variant="dark" className='h-md-50 my-4' onClick={()=> this.cerca_sale_e_post()}>Cerca</Button>
             </Col>
-          <Col></Col>
+          <Col ></Col>
           <Col xs={12}></Col>
           <Col xs={12}></Col>
           <Col xs={12}></Col>
