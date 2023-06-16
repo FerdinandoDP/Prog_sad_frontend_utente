@@ -1,7 +1,8 @@
 # Elementi app
 Nel progetto non è presente un file bat per l'esecuzione del frontend in locale perchè è stato deployato. Nella cartella src sono presenti:
 - un index.js che richiama il file App.js e lo renderizza
-- un file App.js che renderizza al suo interno il Footer e la Navbar
+- un file App.js che renderizza al suo interno il Footer e la Navbar.
+
 Come è possibile osservare nel file gitignore è stato escluso il file .env che contiene al suo interno link al server
 # Cartella style components 
 In questa cartella sono presenti:
